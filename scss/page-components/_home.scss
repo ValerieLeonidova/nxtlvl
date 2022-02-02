@@ -1,0 +1,739 @@
+/* home start */
+.home {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 3rem);
+  min-height: rem(750px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  @include media-breakpoint-down(lg) {
+    height:100vh;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: 63rem;
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: 58rem;
+  }
+  &-back {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    &-top {
+      height: 65%;
+      background: cl(dark);
+      position: relative;
+      overflow: hidden;
+      @include media-breakpoint-down(xs) {
+        height: 50%;
+      }
+    }
+    &-btm {
+      height: 35%;
+      background: cl(white);
+      position: relative;
+      overflow: hidden;
+      @include media-breakpoint-down(xs) {
+        height: 50%;
+      }
+    }
+  }
+  .top-square {
+    position: absolute;
+    &--1 {
+      bottom: rem(200px);
+      left:rem(-170px);
+      @include media-breakpoint-down(md) {
+        left: -21rem;
+      }
+      @include media-breakpoint-down(xs) {
+        left: -9rem;
+        bottom: 18.5rem;
+      }
+      .top-square-item {
+        background-image: linear-gradient(to left, rgba(225, 225, 225, 0.1) 0%, rgba(225, 225, 225, .05) 10%, rgba(225, 225, 225, 0) 35%);
+        @include media-breakpoint-down(xs) {
+          width:31rem;
+          height:31rem;
+        }
+      }
+    }
+    &--2 {
+      bottom: rem(-260px);
+      right:rem(150px);
+      @include media-breakpoint-down(lg) {
+        right: -20.625rem;
+      }
+      @include media-breakpoint-down(xs) {
+        right: -40rem;
+      }
+      .top-square-item {
+        background-image: linear-gradient(45deg, rgba(225, 225, 225, 0.09) 0%, rgba(225, 225, 225, .04) 50%, rgba(225, 225, 225, .01) 100%);
+      }
+    }
+    &--3 {
+      bottom: rem(-720px);
+      right:rem(-480px);
+      @include media-breakpoint-down(lg) {
+        right: -58rem;
+      }
+      @include media-breakpoint-down(xs) {
+        right: -86rem;
+        bottom: -40rem;
+      }
+      .top-square-item {
+        background-image: linear-gradient(45deg, rgba(225, 225, 225, 0.07) 0%, rgba(225, 225, 225, .03) 30%, rgba(225, 225, 225, 0) 50%);
+        width:rem(1400px);
+        height:rem(1400px);
+      }
+    }
+    &-item {
+      width:rem(700px);
+      height:rem(700px);
+      border-radius: rem(60px);
+      transform: rotate(48deg);
+    }
+  }
+  .btm-square {
+    position: absolute;
+    &--1 {
+      top: rem(5px);
+      right:rem(300px);
+      @include media-breakpoint-down(lg) {
+        right: 11rem;
+      }
+      @include media-breakpoint-down(md) {
+        right: 0;
+        top:9.5rem;
+      }
+      .btm-square-item {
+        width:rem(350px);
+        height:rem(280px);
+        background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, 0) 100%);
+        border-radius: rem(60px);
+        transform: rotate(26deg) skew(-33deg, 4deg);
+      }
+    }
+    &--2 {
+      top: rem(5px);
+      right:rem(215px);
+      @include media-breakpoint-down(lg) {
+        right: 7rem;
+      }
+      .btm-square-item {
+        width:rem(205px);
+        height:rem(165px);
+        background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, 0) 100%);
+        border-radius: rem(30px);
+        transform: rotate(26deg) skew(-33deg, 4deg);
+      }
+    }
+    &--3 {
+      top: rem(83px);
+      left:rem(156px);
+      .btm-square-item {
+        width:rem(205px);
+        height:rem(165px);
+        background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .02) 100%);
+        border-radius: rem(30px);
+        transform: rotate(26deg) skew(-33deg, 4deg);
+      }
+    }
+    &--4 {
+      top: rem(25px);
+      left:rem(0px);
+      .btm-square-item {
+        width:rem(140px);
+        height:rem(115px);
+        background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .02) 100%);
+        border-radius: rem(20px);
+        transform: rotate(26deg) skew(-33deg, 4deg);
+      }
+    }
+    &--5 {
+      top: rem(0px);
+      left:rem(166px);
+      .btm-square-item {
+        width:rem(78px);
+        height:rem(65px);
+        background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, .02) 100%);
+        border-radius: rem(15px);
+        transform: rotate(26deg) skew(-33deg, 4deg);
+      }
+    }
+    &-group {
+      top: rem(50px);
+      left:rem(100px);
+      position: absolute;
+      @include media-breakpoint-down(lg) {
+        left: 3.5rem;
+      }
+      @include media-breakpoint-down(md) {
+        top: 11rem;
+      }
+    }
+    &-item {
+      border-radius: rem(60px);
+      transform: rotate(60deg);
+    }
+  }
+  &-text {
+    position: relative;
+    z-index: 6;
+    @include media-breakpoint-down(md) {
+      margin-top: 5rem;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 7rem;
+    }
+    .ttl {
+      display: block;
+      font-size: rem(40px);
+      line-height: rem(50px);
+      font-weight: 700;
+      text-align: center;
+      color:cl(white);
+      position: relative;
+      z-index: 3;
+      margin: rem(50px 0 30px);
+      @include media-breakpoint-down(lg) {
+        font-size: rem(30px);
+        line-height: rem(40px);
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem(50px);
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: rem(26px);
+        line-height: rem(40px);
+        margin-bottom: rem(30px);
+      }
+      @include media-breakpoint-down(xs) {
+        padding: 0 1rem;
+      }
+      &-arrow {
+        position: absolute;
+        @extend .pos-centerX;
+        top:100%;
+        width:rem(110px);
+        height: rem(131px);
+        background: url(../img/arrow-top.png) no-repeat;
+        background-size: contain;
+        animation: arrow 3s ease-in-out infinite;
+        @include media-breakpoint-down(lg) {
+          width:rem(90px);
+          height: rem(110px);
+        }
+        @include media-breakpoint-down(xs) {
+          width:rem(70px);
+          height: rem(90px);
+        }
+      }
+    }
+    p {
+      margin: 0;
+    }
+    &-inner {
+      position: relative;
+      z-index: 2;
+      width:rem(918px);
+      margin: 0 auto;
+      @include media-breakpoint-down(sm) {
+        width:49rem;
+      }
+      @include media-breakpoint-down(xs) {
+        width:100%;
+      }
+    }
+  }
+  .buttons {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+    &-col {
+      position: absolute;
+      top:rem(-20px);
+      display: grid;
+      grid-gap:rem(20px 32px);
+      @include media-breakpoint-up(xl) {
+        grid-template-rows: 1fr 1fr;
+      }
+      @include media-breakpoint-down(lg) {
+        top:3rem;
+      }
+      @include media-breakpoint-down(md) {
+        position: static;
+        width:48%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-gap:0;
+      }
+      @include media-breakpoint-down(xs) {
+        width:100%;
+        padding: 0 1.5rem 1rem;
+      }
+      &--left {
+        left:rem(-390px);
+        @include media-breakpoint-up(xl) {
+          grid-template-columns: rem(43px 210px 210px);
+        }
+        @include media-breakpoint-down(lg) {
+          left:-8rem;
+        }
+        @include media-breakpoint-down(md) {
+        }
+        .item:nth-child(2){
+          @include media-breakpoint-up(xl) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+          }
+        }
+        .item:nth-child(3){
+          @include media-breakpoint-up(xl) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+        }
+        .item:nth-child(4){
+          @include media-breakpoint-up(xl) {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+        }
+      }
+      &--right {
+        right:rem(-390px);
+        @include media-breakpoint-up(xl) {
+          grid-template-columns: rem(210px 210px 43px);
+        }
+        @include media-breakpoint-down(lg) {
+          right:-8rem;
+        }
+        @include media-breakpoint-down(md) {
+          grid-template-columns: rem(210px 43px 210px);
+        }
+        .item:nth-child(1){
+          @include media-breakpoint-up(xl) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+          }
+        }
+        .item:nth-child(2){
+          @include media-breakpoint-up(xl){
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+          }
+        }
+        .item:nth-child(3){
+          @include media-breakpoint-up(xl){
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+        }
+        .item:nth-child(4){
+          @include media-breakpoint-up(xl) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+        }
+      }
+      .arrow {
+        width:rem(24px);
+        display: block;
+        margin: rem(17px 0 0);
+        @include media-breakpoint-down(lg) {
+          margin: 0 auto;
+        }
+        &--btm {
+          margin: rem(54px auto 0);
+          @include media-breakpoint-down(lg) {
+            margin: 0 auto;
+          }
+        }
+      }
+      .link {
+        width:rem(209px);
+        height: rem(209px);
+        background: cl(link);
+        border-radius: rem(30px);
+        box-shadow:rem(4px 10px 54px cl(black, 0.43));
+        text-align: center;
+        color:cl(white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: rem(10px);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s linear;
+        flex-shrink: 0;
+        @include media-breakpoint-down(md) {
+          width: 12rem;
+          height: 12rem;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 10rem;
+          height: 10rem;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 11rem;
+          height: 11rem;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          clip-path: circle(0 at center);
+          transition: all 0.5s linear;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border:rem(2px dashed cl(white));
+          border-radius: rem(30px);
+        }
+        &:hover {
+          text-decoration: none;
+          color:cl(link);
+          //border-style: solid;
+          &:before {
+            clip-path: circle(210px at center);
+          }
+        }
+        &-icon {
+          width:rem(85px);
+          height:rem(85px);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: contain;
+          margin: rem(0 0 15px);
+          position: relative;
+          z-index: 2;
+          @include media-breakpoint-down(md) {
+            width:rem(75px);
+            height:rem(75px);
+          }
+          @include media-breakpoint-down(sm) {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+          @include media-breakpoint-down(xs) {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+        &-ttl {
+          font-size: rem(18px);
+          line-height: rem(24px);
+          width:100%;
+          position: relative;
+          z-index: 2;
+          @include media-breakpoint-down(md) {
+            font-size: rem(16px);
+            line-height: rem(22px);
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: rem(15px);
+            line-height: rem(20px);
+          }
+        }
+      }
+    }
+  }
+  .store {
+    position: relative;
+    img {
+      max-width:100%;
+      height: auto;
+    }
+    .cart {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        width:rem(62px);
+        right:rem(180px);
+        top:rem(300px);
+      }
+    }
+    .graph {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        width:rem(269px);
+        right:rem(185px);
+        top:rem(215px);
+      }
+    }
+    .loupe {
+      position: absolute;
+      width:rem(241px);
+      right:rem(110px);
+      bottom:rem(-89px);
+      animation: loupe 15s ease infinite;
+      @include media-breakpoint-down(xs) {
+        width:10rem;
+        right: 2.875rem;
+        bottom: -4.5625rem;
+      }
+      &-img {
+        width:100%;
+        height: auto;
+        position: relative;
+        z-index: 3;
+      }
+      &-effect {
+        position: absolute;
+        width:rem(110px);
+        height:rem(110px);
+        border-radius: 50%;
+        top:rem(3px);
+        left:rem(38px);
+        z-index: 2;
+        //backdrop-filter: blur(2px);
+      }
+    }
+    .chart {
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        width:rem(230px);
+        left:rem(190px);
+        top:rem(230px);
+        &-inner {
+          position: absolute;
+          bottom:0;
+          left:0;
+          width:100%;
+          height: rem(160px);
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: rem(20px);
+        }
+        &-item {
+          width:rem(25px);
+          position: relative;
+          background: #ffc664;
+          span {
+            content: "";
+            display: block;
+            background: #ff791f;
+          }
+          &:nth-child(1) {
+            animation: chart-item 15s ease infinite;
+            span {
+              height: 45%;
+            }
+          }
+          &:nth-child(2) {
+            animation: chart-item-2 15s ease infinite;
+            span {
+              height: 30%;
+            }
+          }
+          &:nth-child(3) {
+            animation: chart-item 15s ease infinite;
+            span {
+              height: 20%;
+            }
+          }
+          &:nth-child(4) {
+            animation: chart-item-2 15s ease infinite;
+            span {
+              height: 40%;
+            }
+          }
+        }
+      }
+    }
+    .cog {
+      position: absolute;
+      left:rem(140px);
+      bottom:rem(20px);
+      width:rem(100px);
+      height: rem(78px);
+      @include media-breakpoint-down(sm) {
+        left:4.5rem
+      }
+      @include media-breakpoint-down(xs) {
+        left:1.5rem;
+        bottom: -0.75rem;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left:rem(10px);
+        top:rem(10px);
+        box-shadow:rem(-8px 20px 46px cl(black, .7));
+        width:rem(28px);
+        height:rem(28px);
+        border-radius: 50%;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right:rem(10px);
+        bottom:rem(10px);
+        box-shadow:rem(-8px 20px 46px cl(black, .7));
+        width:rem(35px);
+        height:rem(35px);
+        border-radius: 50%;
+      }
+      &-top {
+        position: absolute;
+        left:0;
+        top:0;
+        width:rem(48px);
+        z-index: 2;
+        animation: rotate-cog 12s linear infinite;
+      }
+      &-btm {
+        position: absolute;
+        right:0;
+        bottom:0;
+        width:rem(54px);
+        z-index: 2;
+        animation: rotate-cog 15s linear infinite reverse;
+      }
+    }
+  }
+}
+/* home end */
+@keyframes chart-item {
+  0% {
+    height:100%;
+  }
+  50% {
+    height:50%;
+  }
+  100% {
+    height:100%;
+  }
+}
+@-webkit-keyframes chart-item {
+  0% {
+    height:100%;
+  }
+  50% {
+    height:50%;
+  }
+  100% {
+    height:100%;
+  }
+}
+@keyframes chart-item-2 {
+  0% {
+    height:50%;
+  }
+  50% {
+    height:100%;
+  }
+  100% {
+    height:50%;
+  }
+}
+@-webkit-keyframes chart-item-2 {
+  0% {
+    height:50%;
+  }
+  50% {
+    height:100%;
+  }
+  100% {
+    height:50%;
+  }
+}
+@keyframes loupe {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-5rem, -2rem);
+  }
+  70% {
+    transform: translate(2rem, -6rem) rotate(20deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes loupe {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-5rem, -2rem);
+  }
+  70% {
+    transform: translate(2rem, -6rem) rotate(20deg);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 1rem);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes arrow {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 1rem);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes rotate-cog {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-cog {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,51 @@
+.btn {
+  @extend .inline-b;
+  @extend .ttu;
+  background: cl(primary);
+  color:cl(white);
+  font-size: rem(15px);
+  line-height: rem(42px);
+  font-family: $font;
+  font-weight: 700;
+  border: rem(1px solid cl(primary));
+  cursor: pointer;
+  border-radius: rem(3px);
+  padding: rem(0 28px);
+  outline: 0;
+  white-space: nowrap;
+  &:hover {
+    border-color:cl(primary);
+    background: cl(primary, 0.9);
+    color:cl(white);
+    text-decoration: none;
+  }
+  &:focus {
+    box-shadow:none;
+    color:cl(white);
+  }
+  &--gradient {
+    border:0;
+    @include gradient-x($gradientFirst, $gradientSecond);
+    &:hover {
+      @include gradient-x($gradientSecond, $gradientFirst);
+    }
+  }
+  &--primary-outline {
+    background: none;
+    color:cl(primary);
+    border-color:cl(primary);
+    &:hover {
+      background: cl(primary, 0.1);
+    }
+  }
+  &--black {
+    background: cl(black);
+    border-color:cl(black);
+    &:hover {
+      background: cl(black, .8);
+    }
+  }
+  &--lg {
+    line-height: rem(48px);
+  }
+}

@@ -1,0 +1,21 @@
+
+
+/* **************** bootstrap ****************** */
+@import "bootstrap/bootstrap";
+
+/* **************** INCLUDES ****************** */
+@import "includes/rem";
+@import "includes/base";
+@import "includes/fonts";
+@import "includes/variables";
+@import "includes/common";
+
+/* **************** loader ****************** */
+@import "loader/loaders";
+
+/* **************** PAGE COMPONENTS ****************** */
+@import "page-components/buttons";
+@import "page-components/header";
+@import "page-components/footer";
+@import "page-components/home";
+
